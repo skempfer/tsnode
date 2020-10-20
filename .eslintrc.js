@@ -5,8 +5,13 @@ module.exports = {
   },
   extends: [
     'plugin:@typescript-eslint/recommended',
+    'prettier/@typescript-eslint',
     'standard'
   ],
+  globals: {
+    Atomics: 'readonly',
+    SharedArrayBuffer: 'readonly'
+  },
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaVersion: 12,
